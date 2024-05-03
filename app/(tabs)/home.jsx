@@ -1,11 +1,9 @@
-import { View, Text, FlatList, Image, TextInput, RefreshControl, Alert } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import { View, Text, FlatList, Image, RefreshControl } from 'react-native'
+import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { StatusBar } from 'expo-status-bar'
 
 import { images } from '../../constants'
 import SearchInput from '../../components/SearchInput'
-import FormField from '../../components/FormField'
 import Trending from '../../components/Trending'
 import EmptyState from '../../components/EmptyState'
 import { getAllPosts, getLatestPosts } from '../../lib/appwrite'
@@ -53,7 +51,7 @@ const Home = () => {
             </View>
 
             <SearchInput
-              placeholder={"Search for a video topic"} />
+              placeholder="Search for a video topic" />
 
             <View className="w-full flex-1 pt-5 pb-8">
               <Text
